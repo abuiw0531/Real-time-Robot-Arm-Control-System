@@ -30,7 +30,7 @@
    cd backend
    python main.py
    ```
-3. 開啟瀏覽器並前往 `http://localhost:5000` 即可進入系統控制台。
+3. 開啟瀏覽器並前往 `http://localhost:` 即可進入系統控制台。
 
 ---
 
@@ -60,4 +60,4 @@ This project is a **Real-time Robot Arm Control System** based on computer visio
    cd backend
    python main.py
    ```
-3. Open your browser and navigate to `http://localhost:5000` to access the control dashboard.
+3. Open your browser and navigate to `http://localhost:` to access the control dashboard.
