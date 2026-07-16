@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Arm Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Load Socket.IO Client -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="topbar">
+                <div class="logo">
+                    <i class="ph-fill ph-robot"></i>
+                    <span>ArmControl</span>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot online" id="connection-dot"></div>
+                    <span class="status-text" id="connection-text">Connecting...</span>
+                </div>
+                <!-- <h1>Live Dashboard</h1> -->
+                <div class="topbar-actions">
+                    <button class="btn btn-secondary" style="border-color: var(--accent-danger); color: var(--accent-danger);" id="btn-shutdown" onclick="shutdownServer()"><i class="ph ph-power"></i> System Stop</button>
+                    <!-- <button class="btn btn-primary"><i class="ph ph-play"></i> Start Tracking</button> -->
+                </div>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Video Feed Section -->
+                <div class="card video-card glass-panel">
+                    <div class="card-header">
+                        <h2><i class="ph ph-camera"></i> Camera Feed</h2>
+                        <span class="badge" id="fps-badge">FPS: --</span>
+                    </div>
+                    <div class="video-container placeholder-video">
+                        <!-- Real MJPEG Stream from Flask -->
+                        <img src="{{ url_for('video_feed') }}" id="video-stream" alt="Live Video Feed" style="width: 100%; height: 100%; object-fit: contain;">
+                        
+                        <div class="overlay-ui">
+                            <div class="crosshair"></div>
+                            <div class="aperture-overlay">
+                                <span class="aperture-label">Aperture Ratio</span>
+                                <span class="aperture-value highlight-mono" id="live-aperture">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Panel Layout -->
+                <div class="bottom-panel">
+                    <!-- Command History Card -->
+                    <div class="card log-card glass-panel">
+                        <h2><i class="ph ph-terminal-window"></i> Recent Commands</h2>
+                        <ul class="command-list" id="command-list">
+                            <!-- Logs injected by JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Side Panel (Gauges and Controls) -->
+                    <div class="side-panel">
+                        <!-- Aperture Gauge Card -->
+                        <div class="card gauge-card glass-panel">
+                            <h2><i class="ph ph-gauge"></i> Aperture Status</h2>
+                            <div class="gauge-container">
+                                <svg viewBox="0 0 100 50" class="gauge-svg">
+                                    <path class="gauge-bg" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" />
+                                    <path class="gauge-progress" id="gauge-progress" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-dasharray="125.6" stroke-dashoffset="125.6" />
+                                </svg>
+                                <div class="gauge-value highlight-mono" id="gauge-value">0%</div>
+                            </div>
+                            <div class="threshold-info">
+                                <span>Threshold: <span class="mono" id="threshold-text">0.35</span></span>
+                                <div class="status-tag safe" id="status-tag">SAFE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Store initial threshold from python via template injection, or set default
+        window.APP_CONFIG = {
+            threshold: {{ config_threshold|default(0.35) }}
+        };
+    </script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

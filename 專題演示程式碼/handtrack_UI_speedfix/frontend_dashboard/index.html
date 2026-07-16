@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Arm Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load Phosphor Icons for premium aesthetic -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="ph-fill ph-robot"></i>
+                <span>ArmControl</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-plugs"></i>
+                    <span>Connection</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-sliders"></i>
+                    <span>Calibration</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-chart-line-up"></i>
+                    <span>Data Logs</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <div class="status-dot online"></div>
+                    <span class="status-text">System Active</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="topbar">
+                <h1>Live Dashboard</h1>
+                <div class="topbar-actions">
+                    <button class="btn btn-secondary"><i class="ph ph-video-camera-slash"></i> Camera Off</button>
+                    <button class="btn btn-primary"><i class="ph ph-play"></i> Start Tracking</button>
+                </div>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Video Feed Section -->
+                <div class="card video-card glass-panel">
+                    <div class="card-header">
+                        <h2><i class="ph ph-camera"></i> Camera Feed</h2>
+                        <span class="badge">FPS: 30</span>
+                    </div>
+                    <div class="video-container placeholder-video">
+                        <div class="overlay-ui">
+                            <div class="crosshair"></div>
+                            <div class="aperture-overlay">
+                                <span class="aperture-label">Aperture</span>
+                                <span class="aperture-value highlight-mono" id="live-aperture">0.45</span>
+                            </div>
+                            <div class="tracking-box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Panel (Gauges and Controls) -->
+                <div class="side-panel">
+                    <!-- Aperture Gauge Card -->
+                    <div class="card gauge-card glass-panel">
+                        <h2><i class="ph ph-gauge"></i> Aperture Status</h2>
+                        <div class="gauge-container">
+                            <!-- Circular SVG Gauge -->
+                            <svg viewBox="0 0 100 50" class="gauge-svg">
+                                <path class="gauge-bg" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" />
+                                <path class="gauge-progress" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-dasharray="125.6" stroke-dashoffset="60" />
+                            </svg>
+                            <div class="gauge-value highlight-mono">45%</div>
+                        </div>
+                        <div class="threshold-info">
+                            <span>Threshold: <span class="mono">0.20</span></span>
+                            <div class="status-tag safe">SAFE</div>
+                        </div>
+                    </div>
+
+                    <!-- Command History Card -->
+                    <div class="card log-card glass-panel">
+                        <h2><i class="ph ph-terminal-window"></i> Recent Commands</h2>
+                        <ul class="command-list" id="command-list">
+                            <li><span class="time mono">10:37:21</span> <span class="cmd fw">Cmd: (Center, 1, 0)</span></li>
+                            <li><span class="time mono">10:37:20</span> <span class="cmd fw">Cmd: (Center, 1, 0)</span></li>
+                            <li><span class="time mono">10:37:19</span> <span class="cmd action">Cmd: (A, 0, 1)</span></li>
+                            <li><span class="time mono">10:37:18</span> <span class="cmd action">Cmd: (A, 0, 1)</span></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- System Load Card -->
+                    <div class="card load-card glass-panel">
+                        <h2><i class="ph ph-cpu"></i> System metrics</h2>
+                        <div class="metric">
+                            <div class="metric-header">
+                                <span>Latency</span>
+                                <span class="mono">12 ms</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
