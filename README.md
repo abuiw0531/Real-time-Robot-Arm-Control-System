@@ -10,7 +10,11 @@
 本專案為一個基於電腦視覺與手勢追蹤的「機器手臂即時控制系統」。系統結合了 Python 後端伺服器與現代化的網頁儀表板，允許使用者透過攝像頭即時捕捉手部動作，並將其即時轉換為機器手臂的控制指令。此專案充分展示了**軟硬體整合**、**即時影像處理 (Computer Vision)** 以及**前端互動設計**的實作與系統架構能力。
 
 ### 示範影片
+<<<<<<< HEAD:README.md
 * [觀看示範影片 (Google Drive)](https://youtu.be/jW528MutrcQ)
+=======
+* [觀看示範影片 (Youtube)](https://youtu.be/jW528MutrcQ)
+>>>>>>> 2120bf67f82447e7ec3d824aae0b30afb81a304b:handtrack_UI_speedfix/README.md
 * [簡報 (PPT)](https://drive.google.com/file/d/16lSilyf4hgyNVrIOef8U1tdIqoHGbqig/view)
 
 ### 核心功能
@@ -44,7 +48,11 @@
 This project is a **Real-time Robot Arm Control System** based on computer vision and hand tracking. It seamlessly integrates a Python backend server with a modern web dashboard, enabling users to capture hand gestures via a camera and translate them into precise control commands for a robotic arm. This repository demonstrates solid capabilities in **hardware-software integration**, **real-time computer vision**, and **interactive frontend design**.
 
 ### Demo Video
+<<<<<<< HEAD:README.md
 * [Watch Demo Video (Google Drive)](https://youtu.be/jW528MutrcQ)
+=======
+* [Watch Demo Video (Youtube)](https://youtu.be/jW528MutrcQ)
+>>>>>>> 2120bf67f82447e7ec3d824aae0b30afb81a304b:handtrack_UI_speedfix/README.md
 * [Presentation (PPT)](https://drive.google.com/file/d/11U_YZcVxkhoDrqCDlwzorbc-4bzTHBj7/view?usp=sharing)
 
 ### Core Features
