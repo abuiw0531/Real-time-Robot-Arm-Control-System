@@ -9,6 +9,10 @@
 ### 專案簡介
 本專案為一個基於電腦視覺與手勢追蹤的「機器手臂即時控制系統」。系統結合了 Python 後端伺服器與現代化的網頁儀表板，允許使用者透過攝像頭即時捕捉手部動作，並將其即時轉換為機器手臂的控制指令。此專案充分展示了**軟硬體整合**、**即時影像處理 (Computer Vision)** 以及**前端互動設計**的實作與系統架構能力。
 
+### 示範影片
+* [觀看示範影片 (Google Drive)](https://youtu.be/jW528MutrcQ)
+* [簡報 (PPT)](https://drive.google.com/file/d/16lSilyf4hgyNVrIOef8U1tdIqoHGbqig/view)
+
 ### 核心功能
 * **即時影像串流 (Real-time Video Feed)**：透過 MJPEG 串流技術，將即時影像畫面低延遲傳輸至網頁前端。
 * **手勢追蹤與辨識 (Hand Tracking)**：運用影像處理演算法即時偵測手部關鍵節點與手勢動作。
@@ -38,6 +42,10 @@
 
 ### Project Overview
 This project is a **Real-time Robot Arm Control System** based on computer vision and hand tracking. It seamlessly integrates a Python backend server with a modern web dashboard, enabling users to capture hand gestures via a camera and translate them into precise control commands for a robotic arm. This repository demonstrates solid capabilities in **hardware-software integration**, **real-time computer vision**, and **interactive frontend design**.
+
+### Demo Video
+* [Watch Demo Video (Google Drive)](https://youtu.be/jW528MutrcQ)
+* [Presentation (PPT)](https://drive.google.com/file/d/11U_YZcVxkhoDrqCDlwzorbc-4bzTHBj7/view?usp=sharing)
 
 ### Core Features
 * **Real-time Video Feed**: Utilizes MJPEG streaming to deliver low-latency live camera footage to the web frontend.
