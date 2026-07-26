@@ -13,7 +13,7 @@
 <<<<<<< HEAD:README.md
 =======
 * [觀看示範影片 (Youtube)](https://youtu.be/jW528MutrcQ)
->>>>>>> 2120bf67f82447e7ec3d824aae0b30afb81a304b:handtrack_UI_speedfix/README.md
+
 * [簡報 (PPT)](https://drive.google.com/file/d/16lSilyf4hgyNVrIOef8U1tdIqoHGbqig/view)
 
 ### 核心功能
@@ -50,7 +50,6 @@ This project is a **Real-time Robot Arm Control System** based on computer visio
 <<<<<<< HEAD:README.md
 =======
 * [Watch Demo Video (Youtube)](https://youtu.be/jW528MutrcQ)
->>>>>>> 2120bf67f82447e7ec3d824aae0b30afb81a304b:handtrack_UI_speedfix/README.md
 * [Presentation (PPT)](https://drive.google.com/file/d/11U_YZcVxkhoDrqCDlwzorbc-4bzTHBj7/view?usp=sharing)
 
 ### Core Features
