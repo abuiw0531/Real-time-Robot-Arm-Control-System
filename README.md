@@ -11,7 +11,6 @@
 
 ### 示範影片
 <<<<<<< HEAD:README.md
-* [觀看示範影片 (Google Drive)](https://youtu.be/jW528MutrcQ)
 =======
 * [觀看示範影片 (Youtube)](https://youtu.be/jW528MutrcQ)
 >>>>>>> 2120bf67f82447e7ec3d824aae0b30afb81a304b:handtrack_UI_speedfix/README.md
@@ -49,7 +48,6 @@ This project is a **Real-time Robot Arm Control System** based on computer visio
 
 ### Demo Video
 <<<<<<< HEAD:README.md
-* [Watch Demo Video (Google Drive)](https://youtu.be/jW528MutrcQ)
 =======
 * [Watch Demo Video (Youtube)](https://youtu.be/jW528MutrcQ)
 >>>>>>> 2120bf67f82447e7ec3d824aae0b30afb81a304b:handtrack_UI_speedfix/README.md
