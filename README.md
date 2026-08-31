@@ -1,5 +1,4 @@
-# 基於電腦視覺的即時無接觸機械臂控制系統(Real-Time Vision-Based Touchless Robotic Control System<img width="1126" height="84" alt="image" src="https://github.com/user-attachments/assets/08134dc1-10ce-4fba-8ff9-ef9d438035bc" />
-)
+# 基於電腦視覺的即時無接觸機械臂控制系統(Real-Time Vision-Based Touchless Robotic Control System)
 
 [🇹🇼 中文版本](#中文版本) | [🇬🇧 English Version](#english-version)
 
